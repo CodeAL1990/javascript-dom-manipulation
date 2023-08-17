@@ -15,26 +15,6 @@
   justify-content: center;
 }
 
-/* Part 7 */
-.div2 {
-  height: 400px;
-  outline: solid 2px black;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.div1 {
-  width: 300px;
-  height: 200px;
-  outline: solid 2px black;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .boxes {
   display: flex;
   flex-direction: column;
@@ -60,15 +40,6 @@ button {
   border-radius: 3px;
 }
 
-/* Part 6 */
-/* .hidden-content {
-  display: none;
-}
-
-.hidden-content.reveal-btn {
-  display: block;
-} */
-
 /* Part 1 to 4 */
 /* li {
   margin: 5px 0;
@@ -79,4 +50,33 @@ button {
   font-size: 24px;
   padding: 3px;
   outline: solid 1px gray;
+} */
+
+/* Part 6 */
+/* .hidden-content {
+  display: none;
+}
+
+.hidden-content.reveal-btn {
+  display: block;
+} */
+
+/* Part 7 */
+/* .div2 {
+  height: 400px;
+  outline: solid 2px black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div1 {
+  width: 300px;
+  height: 200px;
+  outline: solid 2px black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 } */
