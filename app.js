@@ -156,16 +156,62 @@
 
 // Reveal Event
 
-const revealBtn = document.querySelector(".reveal-btn");
+// const revealBtn = document.querySelector(".reveal-btn");
 
-const hiddenContent = document.querySelector(".hidden-content");
+// const hiddenContent = document.querySelector(".hidden-content");
 
-function revealContent() {
-  if (hiddenContent.classList.contains("reveal-btn")) {
-    hiddenContent.classList.remove("reveal-btn");
-  } else {
-    hiddenContent.classList.add("reveal-btn");
-  }
-}
+// function revealContent() {
+//   if (hiddenContent.classList.contains("reveal-btn")) {
+//     hiddenContent.classList.remove("reveal-btn");
+//   } else {
+//     hiddenContent.classList.add("reveal-btn");
+//   }
+// }
 
-revealBtn.addEventListener("click", revealContent);
+// revealBtn.addEventListener("click", revealContent);
+
+/* Part 7: Event propagatio --> Event Capturing, Target, Event bubbling */
+
+// false is the default which will cause bubbling while true will capture
+// Calling stopPropagation on event(or e) will stop the bubbling or capturing at the event it is called
+// If you change the button to an anchor tag, clicking it will fire off all the event listeners and refresh them immediately because an anchor tag's purpose is to re-direct. To prevent the re-direct, you can call preventDefault on the event
+window.addEventListener(
+  "click",
+  function () {
+    console.log("Window");
+  },
+  false
+);
+
+document.addEventListener(
+  "click",
+  function () {
+    console.log("Document");
+  },
+  false
+);
+
+document.querySelector(".div2").addEventListener(
+  "click",
+  function () {
+    // e.stopPropagation();
+    console.log("Div 2");
+  },
+  { once: true }
+);
+
+document.querySelector(".div1").addEventListener(
+  "click",
+  function () {
+    console.log("Div 1");
+  },
+  false
+);
+
+document.querySelector("button").addEventListener(
+  "click",
+  function (e) {
+    console.log((e.target.innerText = "Clicked"));
+  },
+  false
+);

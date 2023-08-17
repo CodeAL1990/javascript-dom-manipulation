@@ -6,3 +6,6 @@ Part 3: Creating, modifying, and removing elements
 Part 4: Traversing the DOM
 Part 5: Event listeners
 Part 6: Reveal/hide using event listeners
+Part 7: Event propagation: Event Capturing, Target, Event bubbling
+-> Event capturing goes from top level to bottom
+-> Event bubbling goes from bottom to top
