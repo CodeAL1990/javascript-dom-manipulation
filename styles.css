@@ -40,9 +40,21 @@ button {
   border-radius: 3px;
 }
 
-/* Part 1 to 4 */
-/* li {
+/* Part 1 to 4, 8 */
+
+ul {
+  text-align: center;
+}
+
+li {
+  background-color: teal;
   margin: 5px 0;
+  padding: 3px;
+}
+
+li:hover {
+  background-color: black;
+  color: white;
 }
 
 .list-items {
@@ -50,7 +62,7 @@ button {
   font-size: 24px;
   padding: 3px;
   outline: solid 1px gray;
-} */
+}
 
 /* Part 6 */
 /* .hidden-content {

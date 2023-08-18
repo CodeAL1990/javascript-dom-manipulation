@@ -9,3 +9,4 @@ Part 6: Reveal/hide using event listeners
 Part 7: Event propagation: Event Capturing, Target, Event bubbling
 -> Event capturing goes from top level to bottom
 -> Event bubbling goes from bottom to top
+Part 8: Event delegation

@@ -175,43 +175,66 @@
 // false is the default which will cause bubbling while true will capture
 // Calling stopPropagation on event(or e) will stop the bubbling or capturing at the event it is called
 // If you change the button to an anchor tag, clicking it will fire off all the event listeners and refresh them immediately because an anchor tag's purpose is to re-direct. To prevent the re-direct, you can call preventDefault on the event
-window.addEventListener(
-  "click",
-  function () {
-    console.log("Window");
-  },
-  false
-);
+// window.addEventListener(
+//   "click",
+//   function () {
+//     console.log("Window");
+//   },
+//   false
+// );
 
-document.addEventListener(
-  "click",
-  function () {
-    console.log("Document");
-  },
-  false
-);
+// document.addEventListener(
+//   "click",
+//   function () {
+//     console.log("Document");
+//   },
+//   false
+// );
 
-document.querySelector(".div2").addEventListener(
-  "click",
-  function () {
-    // e.stopPropagation();
-    console.log("Div 2");
-  },
-  { once: true }
-);
+// document.querySelector(".div2").addEventListener(
+//   "click",
+//   function () {
+//     // e.stopPropagation();
+//     console.log("Div 2");
+//   },
+//   { once: true }
+// );
 
-document.querySelector(".div1").addEventListener(
-  "click",
-  function () {
-    console.log("Div 1");
-  },
-  false
-);
+// document.querySelector(".div1").addEventListener(
+//   "click",
+//   function () {
+//     console.log("Div 1");
+//   },
+//   false
+// );
 
-document.querySelector("button").addEventListener(
-  "click",
-  function (e) {
-    console.log((e.target.innerText = "Clicked"));
-  },
-  false
-);
+// document.querySelector("button").addEventListener(
+//   "click",
+//   function (e) {
+//     console.log((e.target.innerText = "Clicked"));
+//   },
+//   false
+// );
+
+/* Part 8: Event delegation */
+
+// Event delegation allows users to append a SINGLE event listener to a parent element that add it to all of its present AND future descendants that match a selector.
+
+// Instead of doing event listeners for every li, you do it on the parent and it will bubble up
+document.querySelector("#sports").addEventListener("click", function (e) {
+  console.log(e.target.getAttribute("id") + " is clicked");
+
+  const target = e.target;
+
+  if (target.matches("li")) {
+    target.style.backgroundColor = "lightgrey";
+  }
+});
+
+const sports = document.querySelector("#sports");
+const newSport = document.createElement("li");
+
+newSport.innerText = "rugby";
+newSport.setAttribute("id", "rugby");
+
+sports.appendChild(newSport);
